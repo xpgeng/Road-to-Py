@@ -2,3 +2,4 @@
 
 - Push160
 - Mydaily
+- some exercises about sql
