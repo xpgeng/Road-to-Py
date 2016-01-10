@@ -20,13 +20,28 @@ class Book:
     #def __del__(self): # seldom used
     #    print "I'm deleted...", self.x
 
+
+class PyBook(Book): #inheritance
+    times = 0
+    
+
+    def borrowtimes(self, borrower):
+        self.readtimes()
+        self.times = self.times + 1
+
+        print "%s was borrowed %s times by %s." %(self.name, self.times, borrower)
+
+
+
+
 a = Book("complexity")
 a.name
 a.readtimes()
 
-b = Book("OutofControl")
+b = PyBook("Core of Python")
 b.name
-b.readtimes()
+b.borrowtimes("Sally")
+b.borrowtimes("Sabie")
 
 
 
